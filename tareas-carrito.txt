@@ -1,0 +1,31 @@
+roladminfinalsucursales
+rolgestorproductos
+
+PARA EL CARRITO
+1. Generar otro componente para el vistarolcliente
+2. generar otro servicio para las tareas del rolcliente
+ng generate component components/vistarolcliente
+ng generate service services/cliente-usuario
+ng generate component components/rolclientesucursales
+
+
+3. importarlas en el routing
+
+// en el navbar
+  { path: 'vistarolcliente', component: VistarolclienteComponent},
+
+// en vistarolcliente
+
+  { path: 'rolclientesucursales', component: RolclientesucursalesComponent},
+<a href="#" class="btn" style="background-color: #A64D79; color: white;" routerLink="/rolclientesucursales" routerLinkActive="active">Ver Sucursales</a>
+
+
+4. trabajar en el componente rolclientesucursales e importar los servicios del rolcliente
+
+
+5. generar otro componente 
+ng generate component components/rolclienteproductos
+
+agregarlo al routing
+
+6. agregar nueva función al servicio para poder ver productos por el id de la sucursal
